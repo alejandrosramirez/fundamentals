@@ -2,6 +2,7 @@
 	<h2>{{ title }}</h2>
 
 	<p>{{ counter }} <sup>2</sup> = {{ square }}</p>
+	<p data-testid="counter">{{ counter }}</p>
 
 	<div>
 		<button @click="increase">+1</button>
@@ -19,7 +20,7 @@ export default {
 		},
 		start: {
 			type: Number,
-			default: 0,
+			default: 100,
 			validator(value) {
 				return value >= 0;
 			},
